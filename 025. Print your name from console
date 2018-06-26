@@ -1,0 +1,15 @@
+using System;
+namespace printNameFromConsole
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Please enter your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello, {0}",name);
+            //Print three numbers 1, 100, 1000
+            Console.WriteLine(1+","+100+","+100);
+        }
+    }
+}
