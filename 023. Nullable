@@ -1,0 +1,58 @@
+/// <summary>
+///In C# types  are divided into 2 broad categories.
+///Value Types  - int, float, double, structs, enums etc
+///Reference Types – Interface, Class, delegates, arrays etc
+///By default value types are non nullable.To make them nullable use?
+///int i = 0(i is non nullable, so "i" cannot be set to null, i = null will generate compiler error)
+///int? j = 0(j is nullable int, so j = null is legal)
+///Nullable types bridge the differences between C# types and Database types
+/// </summary>
+
+using System;
+namespace nullableProgram
+{
+    class Program
+    {
+        static void Main()
+        {
+            int number_1 = 5;//this is not nullable
+            int? number_2;//its nullable
+            number_2 = null;
+            //Console.WriteLine(number_2);
+
+            int avialableTickets;
+            int? ticketsOnSale = null;
+            if (ticketsOnSale == null)
+            {
+                avialableTickets = 0;
+            }
+            else
+            {
+                avialableTickets = (int)ticketsOnSale;
+            }
+
+            Console.WriteLine("Available tickets: {0}",avialableTickets);
+
+            //nullable through coalesce(??) operator
+            int accountBalance;
+            int? availabeAccountBalance = null;
+            accountBalance = availabeAccountBalance ?? 0;
+            Console.WriteLine("Available account balance is {0}",accountBalance);
+
+            //nullable through HasValue
+
+            int? myPaisa = null;
+            if(!myPaisa.HasValue)//not HasValue is null
+            {
+                Console.WriteLine("My paisa is 0");
+            }
+            else
+            {
+                Console.WriteLine("My paisa is "+myPaisa);
+            }
+
+        }
+
+
+    }
+}
