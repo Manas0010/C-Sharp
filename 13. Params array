@@ -1,0 +1,24 @@
+using System;
+namespace paramsArray
+{
+    class program
+    {
+        static void Main()
+        {
+            int sr1 = sumAll(1, 2, 4);
+            Console.WriteLine(sr1);
+
+        }
+
+        static int sumAll(params int[] arr)
+        {
+            int sum = 0;
+            foreach(int k in arr)
+            {
+                sum = sum + k;
+            }
+            return sum;
+
+        }
+    }
+}
