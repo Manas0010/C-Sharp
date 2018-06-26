@@ -1,0 +1,22 @@
+using System;
+namespace StaticKeyword
+{
+    class program
+    {
+        static void Main()
+        {
+            person ps1 = new person();
+            person.printName();
+            //person.name;
+        }
+    }
+
+    class person
+    {
+        public static string name = "Manas";
+        public static void printName()
+        {
+            Console.WriteLine(name);
+        }
+    }
+}
