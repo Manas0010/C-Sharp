@@ -1,0 +1,22 @@
+using System;
+namespace PostfixPrefix
+{
+    class program
+    {
+        static void Main()
+        {
+            int a = 5;
+            int b = a++;// now a = 6 and b = 5;
+            Console.WriteLine("{0},{1}",a,b);
+            int c = ++a;//now a = 7 and c=7
+            Console.WriteLine("{0},{1}",c,a);
+
+            int num1 = 3;
+            int num2 = num1--;//num2 = 3 and num1=2
+            int num3 = --num1;//num3 = 1 and num1=1
+            Console.WriteLine("{0},{1},{2}",num1,num2,num3);
+
+
+        }
+    }
+}
