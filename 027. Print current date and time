@@ -1,0 +1,12 @@
+using System;
+namespace dateTime
+{
+    class Program
+    {
+        static void Main()
+        {
+            DateTime today = DateTime.Now;
+            Console.WriteLine("Today: {0}", today);
+        }
+    }
+}
