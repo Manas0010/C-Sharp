@@ -1,0 +1,36 @@
+using System;
+namespace consoleFormatting
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Title = "Console Formatting";
+            Console.SetWindowSize(100, 20);
+            //Console.ForegroundColor = ConsoleColor.DarkRed;
+            //Console.BackgroundColor = ConsoleColor.DarkYellow;
+            string C = "This is the mother language of all language";
+            string cAdditional = "Dennis Rechie is Father of C";
+            string Java = "Java is a good programming language";
+            string javaAdditional = "I dont know who is Father of Java";
+
+            PrintText("C", C, cAdditional);
+            PrintText("Java", Java, javaAdditional);
+        }
+
+        public static void PrintText(string title, string body, string additionalInfo)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(title+": ");
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(body);
+
+            Console.BackgroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine(additionalInfo);
+
+            Console.WriteLine();
+            Console.ResetColor();
+        }
+    }
+}
