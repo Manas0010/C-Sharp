@@ -1,0 +1,24 @@
+using System;
+namespace typeConversion
+{
+    class Program
+    {
+        static void Main()
+        {
+            int i = 56;
+            float f = 46.7f;
+            double d = 234.98;
+            bool b = true;
+            Console.WriteLine(i.ToString());
+            Console.WriteLine("Size of int is {0}",sizeof(int));
+            Console.WriteLine(f.ToString());
+            Console.WriteLine("Size of int is {0}", sizeof(float));
+            //Console.ReadLine();
+            Console.WriteLine(d.ToString());
+            Console.WriteLine("Size of int is {0}", sizeof(double));
+            Console.WriteLine(b.ToString());
+            Console.WriteLine("Size of int is {0}", sizeof(bool));
+
+        }
+    }
+}
