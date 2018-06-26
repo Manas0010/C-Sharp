@@ -1,0 +1,48 @@
+using System;
+namespace parseMethods
+{
+    class program
+    {
+        static void Main()
+        {
+            Console.WriteLine("This is convert string to number through int.Parse\n---");
+            Console.Write("Please enter any number: ");
+            string num1 = Console.ReadLine();
+            Console.Write("Please enter another number: ");
+            string num2 = Console.ReadLine();
+            int sum = int.Parse(num1) + int.Parse(num2);
+            Console.WriteLine("The sum of {0} and {1} is {2}",num1,num2,sum);
+            Console.WriteLine("This is convert number through Convert.ToInt32\n---");
+
+            Console.Write("Enter value of a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter value of b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            int add = a + b;
+            Console.WriteLine("The add of {0} and {1} is {2}",a,b,add);
+
+            Console.WriteLine(@"This is convert string to valid number through int.TryParse
+                with messages\n---");
+
+            Console.Write("Enter x: ");
+            string x = Console.ReadLine();
+            Console.Write("Enter y: ");
+            string y = Console.ReadLine();
+
+            int m, n;
+            bool convX = int.TryParse(x, out m);
+            bool convY = int.TryParse(y, out n);
+            if(convX==false || convY == false)
+            {
+                Console.WriteLine("Please enter valid number");
+            }
+            else{
+                int z = m + n;
+                Console.WriteLine("The sum of {0} and {1} is {2}",m,n,z);
+            }
+
+
+        }
+    }
+}
