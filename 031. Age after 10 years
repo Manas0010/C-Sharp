@@ -1,0 +1,18 @@
+using System;
+namespace AgeAfter10Years
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Please enter your age: ");
+            byte myAge = byte.Parse(Console.ReadLine());
+            Console.WriteLine("My age after 10 years will be {0}", myAge + 10);
+
+            //By DateTime Object
+            DateTime age = new DateTime(myAge, 1, 1);
+            Console.WriteLine("My age will be after 15 yrs: {0}",age.AddYears(15).Year);
+            
+        }
+    }
+}
