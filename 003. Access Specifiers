@@ -1,0 +1,72 @@
+using System;
+namespace AccessSpecifiers
+{
+    class program
+    {
+        static void Main()
+        {
+            person ps1 = new person();
+            
+            //ps1.village;//Access due to public 
+            //ps1.capital;//Access due to internal
+            //ps1.country;//Access due to protected internal
+            //person.dist;//Access due to static 
+
+        }
+    }
+
+    class person
+    {
+        string name = "Manas";
+        public string village = "Barola";
+        public static string dist = "GB Nagar";
+        private string city = "Noida";
+        protected string state = "Uttar Pradesh";
+        internal string capital = "Lucknow";
+        protected internal string country = "India";
+        
+        void printPersonData()
+        {
+            Console.WriteLine(name);//Access due to own member
+            Console.WriteLine(city);//Access due to its own private member
+            Console.WriteLine(village);//Access due to public member
+            Console.WriteLine(capital);//Acccess due to internal member
+            Console.WriteLine(country);//Access due to protected internal
+            Console.WriteLine(person.dist);//Access due to static keyword
+        }
+    }
+
+    class Manager : person
+    {
+        Manager mn1 = new Manager();
+        void printManagerData()
+        {
+            //mn1.village;//Access due to public member
+            //mn1.state;//Access due to protected member
+            //mn1.capital;//Access due to internal member
+            //mn1.country;//Access due to protected internal member
+            //person.dist;//Access due to static keyword member
+
+    }
+ }
+}
+
+
+//And
+
+using System;
+namespace AccessSpecifiers2
+{
+    class program2 : AccessSpecifiers.person
+    {
+        static void Main()
+        {
+            program2 pg2 = new program2();
+            //pg2.capital;//Access due to internal keyword
+            //pg2.country;//Access due to protected internal
+            //pg2.state;//Access due to protected
+            //pg2.village;//Access due to public 
+            ///AccessSpecifiers.person.dist;//Access due to static keyword
+        }
+    }
+}
