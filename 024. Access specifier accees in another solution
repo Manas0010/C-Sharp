@@ -1,0 +1,38 @@
+using System;
+namespace AccessSpecifierTest
+{
+    public class Program
+    {
+        static void Main()
+        {
+            Person ps1 = new Person();
+            //ps1.hubby;
+            //ps1.job;
+            //ps1.Name;
+            Console.WriteLine("Hello");
+           
+        }
+
+        public class Person
+        {
+            public string Name = "Manas";
+            private string bankAccount="Baroda";
+            protected int age = 28;
+            internal string hubby = "Swimming";
+            protected internal string job = "Social Worker";
+        }
+
+        public class Manager : Person
+        {
+           void ManagerAccessPersonData()
+            {
+                Manager mn1 = new Manager();
+                //mn1.hubby;
+                //mn1.job;
+                //mn1.Name;
+                //mn1.age;
+                
+            }
+        }
+    }
+}
