@@ -1,0 +1,15 @@
+using System;
+namespace dateObject
+{
+    class program
+    {
+        static void Main()
+        {
+            DateTime dt = DateTime.Now;
+            Console.WriteLine(dt);
+
+            DateTime dt2 = new DateTime(2011,05,27,02,23,22);
+            Console.WriteLine(dt2);
+        }
+    }
+}
