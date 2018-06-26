@@ -1,0 +1,12 @@
+using System;
+namespace ternaryOperator
+{
+    class program
+    {
+        static void Main()
+        {
+            string name = "Croma";
+            Console.WriteLine(name=="Croma"?"Welcome "+name:"Skip");
+        }
+    }
+}
