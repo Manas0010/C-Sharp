@@ -1,0 +1,23 @@
+using System;
+namespace numberSquare
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Please enter any number");
+            string a = Console.ReadLine();
+            int x;
+            bool convA = int.TryParse(a, out x);
+            if (convA == false)
+            {
+                Console.WriteLine("Please enter a valid number: ");
+            }
+            else
+            {
+                int square = x * x;
+                Console.WriteLine("The square of {0} is {1}",a,square);
+            }
+        }
+    }
+}
