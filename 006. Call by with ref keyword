@@ -1,0 +1,23 @@
+//The ref keyword should first declared it is not initialize their values it will be fine
+using System;
+namespace refKeyword
+{
+    class program
+    {
+        static void Main()
+        {
+            int myAge = 28;
+            string myName = "manas";
+            printData(ref myAge, ref myName);
+            Console.WriteLine("My age is: {0}",myAge);
+            Console.WriteLine("My name is: {0}",myName);
+        }
+
+        public static void printData(ref int age, ref string name)
+        {
+            age = 23;
+            name = "MKP";
+
+        }
+    }
+}
