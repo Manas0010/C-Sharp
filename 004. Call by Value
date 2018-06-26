@@ -1,0 +1,17 @@
+using System;
+namespace callByValue
+{
+    class program
+    {
+        static void Main()
+        {
+            int add_1 = AddNum(4, 16);
+            Console.WriteLine(add_1);
+         }
+
+        public static int AddNum(int a, int b)
+        {
+            return a + b;
+        }
+    }
+}
