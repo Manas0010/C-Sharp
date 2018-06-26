@@ -1,0 +1,56 @@
+using System;
+namespace Operator
+{
+    class program
+    {
+        static void Main()
+        {
+            int i = 10;
+            bool b= true;
+            int numerator = 10;
+            int denominator = 2;
+            int quotient = numerator / denominator;
+            Console.WriteLine(quotient);
+            int remainder = numerator % denominator;
+            Console.WriteLine(remainder);
+            int number = 10;
+            if(number == 10)
+            {
+                Console.WriteLine("Number is equal to 10");
+            }
+
+            if (number != 5)
+            {
+                Console.WriteLine("Number is not equal to 5");
+            }
+
+            int number1 = 10;
+            int number2 = 20;
+            if (number1 == 10 && number2 == 20)
+            {
+                Console.WriteLine("Both conditions are true");
+            }
+            if(number1==10 || number2 == 15)
+            {
+                Console.WriteLine("Atleast one condition is true");
+            }
+
+            int number3 = 10;
+            bool isNumber10;
+            if (number3 == 10)
+            {
+                isNumber10 = true;
+            }
+            else
+            {
+                isNumber10 = false;
+            }
+            Console.WriteLine("The number3 == 10 is {0}", isNumber10);
+
+            isNumber10 = number3 == 10 ? true : false;
+            Console.WriteLine("The number3=10 is {0}",isNumber10);
+
+        }
+    }
+
+}
