@@ -1,0 +1,20 @@
+//out keyword helps to initialize the value at runtime
+
+using System;
+namespace outKeyword
+{
+    class program
+    {
+        static void Main()
+        {
+            string myName = "Manas Pradhan";
+            program.printData(out myName);
+            Console.WriteLine("my name is: {0}",myName);
+        }
+
+        public static void printData(out string name)
+        {
+            name = "MKP";
+        }
+    }
+}
