@@ -1,0 +1,16 @@
+using System;
+namespace esacpeSequence
+{
+    class program
+    {
+        static void Main()
+        {
+            Console.WriteLine("This escape sequence chapter..");
+            Console.WriteLine("\"Hello\"");
+            Console.WriteLine("1\t2\t3");
+            Console.WriteLine("c:\\demo");
+            Console.WriteLine("This is Manas\'s pen.");
+            Console.ReadLine();
+        }
+    }
+}
