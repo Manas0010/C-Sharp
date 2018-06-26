@@ -1,0 +1,22 @@
+using System;
+namespace fullName
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Please enter your first name: ");
+            string fn = Console.ReadLine();
+            Console.Write("Please enter your last name: ");
+            string ln = Console.ReadLine();
+            string myname = fullName(ref fn, ref ln);
+            Console.WriteLine("My name is: {0}",myname);
+        }
+        public static string fullName(ref string a, ref string b)
+        {
+            return a +" "+ b;
+            
+        }
+
+    }
+}
