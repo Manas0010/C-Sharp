@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace useClassLibrary
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Rectangle_Area.Program r1 = new Rectangle_Area.Program();
+            int rec1 = r1.getRectangleArea(100, 500);
+            Console.WriteLine("The rectangle is "+rec1);
+        }
+    }
+}
+
+//first make class libray in new project with class library apps and build library
+//and make Add reference in another .cs console file for apply
