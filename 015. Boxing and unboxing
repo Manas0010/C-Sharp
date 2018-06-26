@@ -1,0 +1,17 @@
+using System;
+namespace boxingUnboxing
+{
+    class program
+    {
+        static void Main()
+        {
+            int num = 4;
+            Object cn = num;//Boxing -> Convert primitive to object type
+            Console.WriteLine(cn.ToString());
+            Console.ReadLine();
+            int on = (int)cn;//Unboxing -> Convert object to primitive type
+            Console.WriteLine(on);
+            Console.ReadLine();
+        }
+    }
+}
